@@ -22,6 +22,15 @@ final class PersonCell: UICollectionViewCell {
         activityIndicator.hidesWhenStopped = true
         personLabel.text = person.shortDescription
         
+        networkManager.fetchData(from: URL(string: person.image)!) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.personImage.image = UIImage(data: imageData)
+                self?.activityIndicator.stopAnimating()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 

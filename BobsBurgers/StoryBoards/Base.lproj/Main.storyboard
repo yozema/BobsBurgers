@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="25" minimumInteritemSpacing="25" id="ps9-69-lFg">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="25" id="ps9-69-lFg">
                             <size key="itemSize" width="310" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,21 +37,22 @@
                                                 <constraint firstAttribute="width" constant="125" id="v38-1c-7EL"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BKn-kB-xw2">
+                                            <rect key="frame" x="52.5" y="55" width="20" height="20"/>
+                                        </activityIndicatorView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-vn-A1E">
-                                            <rect key="frame" x="189.5" y="53" width="51.5" height="24"/>
+                                            <rect key="frame" x="140" y="53" width="155" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" systemColor="systemOrangeColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BKn-kB-xw2">
-                                            <rect key="frame" x="52.5" y="55" width="20" height="20"/>
-                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="L3Y-vn-A1E" firstAttribute="centerX" secondItem="pCB-3R-Hlb" secondAttribute="centerX" constant="60" id="2Hs-VE-GhQ"/>
                                         <constraint firstItem="BKn-kB-xw2" firstAttribute="centerX" secondItem="EBo-fU-dc5" secondAttribute="centerX" id="30c-eR-bGg"/>
+                                        <constraint firstAttribute="trailing" secondItem="L3Y-vn-A1E" secondAttribute="trailing" constant="15" id="6eI-MT-Wpx"/>
                                         <constraint firstItem="EBo-fU-dc5" firstAttribute="leading" secondItem="pCB-3R-Hlb" secondAttribute="leading" id="VYi-8t-ULy"/>
-                                        <constraint firstItem="L3Y-vn-A1E" firstAttribute="centerY" secondItem="pCB-3R-Hlb" secondAttribute="centerY" id="XBe-cQ-8yL"/>
+                                        <constraint firstItem="L3Y-vn-A1E" firstAttribute="leading" secondItem="EBo-fU-dc5" secondAttribute="trailing" constant="15" id="WF4-lN-zjR"/>
+                                        <constraint firstItem="L3Y-vn-A1E" firstAttribute="centerY" secondItem="pCB-3R-Hlb" secondAttribute="centerY" id="hfK-x6-ikg"/>
                                         <constraint firstItem="EBo-fU-dc5" firstAttribute="top" secondItem="pCB-3R-Hlb" secondAttribute="top" id="tNy-6n-avG"/>
                                         <constraint firstAttribute="bottom" secondItem="EBo-fU-dc5" secondAttribute="bottom" id="uDg-YV-ld2"/>
                                         <constraint firstItem="BKn-kB-xw2" firstAttribute="centerY" secondItem="EBo-fU-dc5" secondAttribute="centerY" id="vO5-C5-Oca"/>

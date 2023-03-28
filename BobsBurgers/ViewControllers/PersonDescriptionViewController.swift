@@ -12,6 +12,8 @@ class PersonDescriptionViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

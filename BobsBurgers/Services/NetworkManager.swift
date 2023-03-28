@@ -39,13 +39,16 @@ final class NetworkManager {
     }
 
     
-//    func fetchData(from url: URL, completion: @escaping(Result<Data, AFError>) -> Void) {
-//        AF.request(url)
-//            .validate()
-//            .responseData { dataResponse in
-//                switch dataResponse.result {
-//
-//                }
-//            }
-//    }
+    func fetchData(from url: URL, completion: @escaping(Result<Data, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { dataResponse in
+                switch dataResponse.result {
+                case .success(let imageData):
+                    completion(.success(imageData))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }

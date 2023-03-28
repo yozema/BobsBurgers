@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PersonsCollectionViewController: UICollectionViewController {
+final class PersonsCollectionViewController: UICollectionViewController {
     // MARK: - Properties
     private var persons: [Person] = []
     private var networkManager = NetworkManager.shared
@@ -19,6 +19,14 @@ class PersonsCollectionViewController: UICollectionViewController {
         
         showSpinner(in: view)
         fetchPersons()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let item = sender as? Person else { return }
+        if segue.identifier == "showDetails" {
+            guard let detailsVC = segue.destination as? PersonDescriptionViewController else { return }
+            detailsVC.person = item
+        }
     }
     
     // MARK: - Private Functions
@@ -34,7 +42,6 @@ class PersonsCollectionViewController: UICollectionViewController {
             }
         }
     }
-    
     
     private func showSpinner(in view: UIView) {
         spinnerView = UIActivityIndicatorView(style: .large)
@@ -63,7 +70,7 @@ extension PersonsCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCharacter = persons[indexPath.item]
-        performSegue(withIdentifier: "showDescription", sender: selectedCharacter)
+        performSegue(withIdentifier: "showDetails", sender: selectedCharacter)
     }
 }
 

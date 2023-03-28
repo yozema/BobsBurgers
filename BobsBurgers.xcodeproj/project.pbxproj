@@ -12,12 +12,12 @@
 		9CDD06ED29D35C9600B3EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06EB29D35C9600B3EA8B /* Main.storyboard */; };
 		9CDD06EF29D35C9700B3EA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */; };
 		9CDD06F229D35C9700B3EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06F029D35C9700B3EA8B /* LaunchScreen.storyboard */; };
-		9CDD070129D35D2800B3EA8B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070029D35D2800B3EA8B /* Character.swift */; };
+		9CDD070129D35D2800B3EA8B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070029D35D2800B3EA8B /* Person.swift */; };
 		9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070229D35D3400B3EA8B /* NetworkManager.swift */; };
 		9CDD070629D35DA100B3EA8B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDD070529D35DA100B3EA8B /* Alamofire */; };
-		9CDD070829D3618A00B3EA8B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070729D3618A00B3EA8B /* CharacterCell.swift */; };
-		9CDD070A29D361DB00B3EA8B /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */; };
-		9CDD070C29D361F900B3EA8B /* CharacterDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */; };
+		9CDD070829D3618A00B3EA8B /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070729D3618A00B3EA8B /* PersonCell.swift */; };
+		9CDD070A29D361DB00B3EA8B /* PersonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070929D361DB00B3EA8B /* PersonsCollectionViewController.swift */; };
+		9CDD070C29D361F900B3EA8B /* PersonDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070B29D361F900B3EA8B /* PersonDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +28,11 @@
 		9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CDD06F129D35C9700B3EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CDD06F329D35C9700B3EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CDD070029D35D2800B3EA8B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9CDD070029D35D2800B3EA8B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		9CDD070229D35D3400B3EA8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		9CDD070729D3618A00B3EA8B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
-		9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDescriptionViewController.swift; sourceTree = "<group>"; };
+		9CDD070729D3618A00B3EA8B /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		9CDD070929D361DB00B3EA8B /* PersonsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCollectionViewController.swift; sourceTree = "<group>"; };
+		9CDD070B29D361F900B3EA8B /* PersonDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 		9CDD06FC29D35CE300B3EA8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */,
-				9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */,
+				9CDD070929D361DB00B3EA8B /* PersonsCollectionViewController.swift */,
+				9CDD070B29D361F900B3EA8B /* PersonDescriptionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,7 +116,7 @@
 		9CDD06FD29D35CEF00B3EA8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9CDD070729D3618A00B3EA8B /* CharacterCell.swift */,
+				9CDD070729D3618A00B3EA8B /* PersonCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		9CDD06FE29D35CFA00B3EA8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9CDD070029D35D2800B3EA8B /* Character.swift */,
+				9CDD070029D35D2800B3EA8B /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,11 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD070A29D361DB00B3EA8B /* CharactersCollectionViewController.swift in Sources */,
-				9CDD070829D3618A00B3EA8B /* CharacterCell.swift in Sources */,
+				9CDD070A29D361DB00B3EA8B /* PersonsCollectionViewController.swift in Sources */,
+				9CDD070829D3618A00B3EA8B /* PersonCell.swift in Sources */,
 				9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */,
-				9CDD070129D35D2800B3EA8B /* Character.swift in Sources */,
-				9CDD070C29D361F900B3EA8B /* CharacterDescriptionViewController.swift in Sources */,
+				9CDD070129D35D2800B3EA8B /* Person.swift in Sources */,
+				9CDD070C29D361F900B3EA8B /* PersonDescriptionViewController.swift in Sources */,
 				9CDD06E629D35C9600B3EA8B /* AppDelegate.swift in Sources */,
 				9CDD06E829D35C9600B3EA8B /* SceneDelegate.swift in Sources */,
 			);

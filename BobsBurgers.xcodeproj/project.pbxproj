@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		9CDD06E629D35C9600B3EA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD06E529D35C9600B3EA8B /* AppDelegate.swift */; };
 		9CDD06E829D35C9600B3EA8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD06E729D35C9600B3EA8B /* SceneDelegate.swift */; };
-		9CDD06EA29D35C9600B3EA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD06E929D35C9600B3EA8B /* ViewController.swift */; };
 		9CDD06ED29D35C9600B3EA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06EB29D35C9600B3EA8B /* Main.storyboard */; };
 		9CDD06EF29D35C9700B3EA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */; };
 		9CDD06F229D35C9700B3EA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CDD06F029D35C9700B3EA8B /* LaunchScreen.storyboard */; };
+		9CDD070129D35D2800B3EA8B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070029D35D2800B3EA8B /* Character.swift */; };
+		9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070229D35D3400B3EA8B /* NetworkManager.swift */; };
+		9CDD070629D35DA100B3EA8B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDD070529D35DA100B3EA8B /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9CDD06E229D35C9600B3EA8B /* BobsBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobsBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDD06E529D35C9600B3EA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CDD06E729D35C9600B3EA8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9CDD06E929D35C9600B3EA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CDD06EC29D35C9600B3EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CDD06F129D35C9700B3EA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CDD06F329D35C9700B3EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CDD070029D35D2800B3EA8B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9CDD070229D35D3400B3EA8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDD070629D35DA100B3EA8B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,72 @@
 		9CDD06E429D35C9600B3EA8B /* BobsBurgers */ = {
 			isa = PBXGroup;
 			children = (
-				9CDD06E529D35C9600B3EA8B /* AppDelegate.swift */,
-				9CDD06E729D35C9600B3EA8B /* SceneDelegate.swift */,
-				9CDD06E929D35C9600B3EA8B /* ViewController.swift */,
-				9CDD06EB29D35C9600B3EA8B /* Main.storyboard */,
-				9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */,
-				9CDD06F029D35C9700B3EA8B /* LaunchScreen.storyboard */,
-				9CDD06F329D35C9700B3EA8B /* Info.plist */,
+				9CDD06FF29D35D0500B3EA8B /* Services */,
+				9CDD06FE29D35CFA00B3EA8B /* Models */,
+				9CDD06FD29D35CEF00B3EA8B /* Views */,
+				9CDD06FC29D35CE300B3EA8B /* ViewControllers */,
+				9CDD06FA29D35CBB00B3EA8B /* StoryBoards */,
+				9CDD06FB29D35CCC00B3EA8B /* App */,
+				9CDD06F929D35CB200B3EA8B /* Resources */,
 			);
 			path = BobsBurgers;
+			sourceTree = "<group>";
+		};
+		9CDD06F929D35CB200B3EA8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CDD06EE29D35C9700B3EA8B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CDD06FA29D35CBB00B3EA8B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				9CDD06EB29D35C9600B3EA8B /* Main.storyboard */,
+				9CDD06F029D35C9700B3EA8B /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		9CDD06FB29D35CCC00B3EA8B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9CDD06E529D35C9600B3EA8B /* AppDelegate.swift */,
+				9CDD06E729D35C9600B3EA8B /* SceneDelegate.swift */,
+				9CDD06F329D35C9700B3EA8B /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9CDD06FC29D35CE300B3EA8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9CDD06FD29D35CEF00B3EA8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CDD06FE29D35CFA00B3EA8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CDD070029D35D2800B3EA8B /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CDD06FF29D35D0500B3EA8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9CDD070229D35D3400B3EA8B /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +144,9 @@
 			dependencies = (
 			);
 			name = BobsBurgers;
+			packageProductDependencies = (
+				9CDD070529D35DA100B3EA8B /* Alamofire */,
+			);
 			productName = BobsBurgers;
 			productReference = 9CDD06E229D35C9600B3EA8B /* BobsBurgers.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 9CDD06D929D35C9600B3EA8B;
+			packageReferences = (
+				9CDD070429D35DA100B3EA8B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9CDD06E329D35C9600B3EA8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDD06EA29D35C9600B3EA8B /* ViewController.swift in Sources */,
+				9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */,
+				9CDD070129D35D2800B3EA8B /* Character.swift in Sources */,
 				9CDD06E629D35C9600B3EA8B /* AppDelegate.swift in Sources */,
 				9CDD06E829D35C9600B3EA8B /* SceneDelegate.swift in Sources */,
 			);
@@ -289,12 +357,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G2WMS5YDNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BobsBurgers/Info.plist;
+				INFOPLIST_FILE = BobsBurgers/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iz.BobsBurgers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +389,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G2WMS5YDNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BobsBurgers/Info.plist;
+				INFOPLIST_FILE = BobsBurgers/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +403,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iz.BobsBurgers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CDD070429D35DA100B3EA8B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CDD070529D35DA100B3EA8B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CDD070429D35DA100B3EA8B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CDD06DA29D35C9600B3EA8B /* Project object */;
 }

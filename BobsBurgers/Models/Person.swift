@@ -15,7 +15,6 @@ struct Person: Decodable {
     let occupation: String
     let firstEpisode: String
     let voicedBy: String
-    let moreInfo: String
     
     var shortDescription: String {
         """
@@ -32,7 +31,6 @@ struct Person: Decodable {
         Occupation: \(occupation)
         First Episode: \(firstEpisode)
         Voiced By: \(voicedBy)
-        More Info: \(moreInfo)
         """
     }
     
@@ -43,8 +41,7 @@ struct Person: Decodable {
         hairColor: String,
         occupation: String,
         firstEpisode: String,
-        voicedBy: String,
-        moreInfo: String
+        voicedBy: String
     )
     {
         self.name = name
@@ -54,7 +51,6 @@ struct Person: Decodable {
         self.occupation = occupation
         self.firstEpisode = firstEpisode
         self.voicedBy = voicedBy
-        self.moreInfo = moreInfo
     }
     
     init(personData: [String: Any]) {
@@ -65,7 +61,6 @@ struct Person: Decodable {
         occupation = personData["occupation"] as? String ?? "Unknown"
         firstEpisode = personData["firstEpisode"] as? String ?? ""
         voicedBy = personData["voicedBy"] as? String ?? ""
-        moreInfo = personData["moreInfo"] as? String ?? ""
     }
     
     static func getPersons(from value: Any) -> [Person] {

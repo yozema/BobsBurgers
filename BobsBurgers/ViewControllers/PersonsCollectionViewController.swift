@@ -37,6 +37,7 @@ final class PersonsCollectionViewController: UICollectionViewController {
                 self?.persons = persons
                 self?.collectionView.reloadData()
                 self?.spinnerView.stopAnimating()
+                print(persons)
             case .failure(let error):
                 print(error.localizedDescription)
             }

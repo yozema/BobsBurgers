@@ -15,6 +15,9 @@
 		9CDD070129D35D2800B3EA8B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070029D35D2800B3EA8B /* Character.swift */; };
 		9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070229D35D3400B3EA8B /* NetworkManager.swift */; };
 		9CDD070629D35DA100B3EA8B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDD070529D35DA100B3EA8B /* Alamofire */; };
+		9CDD070829D3618A00B3EA8B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070729D3618A00B3EA8B /* CharacterCell.swift */; };
+		9CDD070A29D361DB00B3EA8B /* CharactersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */; };
+		9CDD070C29D361F900B3EA8B /* CharacterDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		9CDD06F329D35C9700B3EA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CDD070029D35D2800B3EA8B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9CDD070229D35D3400B3EA8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9CDD070729D3618A00B3EA8B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewController.swift; sourceTree = "<group>"; };
+		9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,10 @@
 		9CDD06E429D35C9600B3EA8B /* BobsBurgers */ = {
 			isa = PBXGroup;
 			children = (
+				9CDD06FC29D35CE300B3EA8B /* ViewControllers */,
+				9CDD06FD29D35CEF00B3EA8B /* Views */,
 				9CDD06FF29D35D0500B3EA8B /* Services */,
 				9CDD06FE29D35CFA00B3EA8B /* Models */,
-				9CDD06FD29D35CEF00B3EA8B /* Views */,
-				9CDD06FC29D35CE300B3EA8B /* ViewControllers */,
 				9CDD06FA29D35CBB00B3EA8B /* StoryBoards */,
 				9CDD06FB29D35CCC00B3EA8B /* App */,
 				9CDD06F929D35CB200B3EA8B /* Resources */,
@@ -101,6 +107,8 @@
 		9CDD06FC29D35CE300B3EA8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CDD070929D361DB00B3EA8B /* CharactersCollectionViewController.swift */,
+				9CDD070B29D361F900B3EA8B /* CharacterDescriptionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 		9CDD06FD29D35CEF00B3EA8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9CDD070729D3618A00B3EA8B /* CharacterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDD070A29D361DB00B3EA8B /* CharactersCollectionViewController.swift in Sources */,
+				9CDD070829D3618A00B3EA8B /* CharacterCell.swift in Sources */,
 				9CDD070329D35D3400B3EA8B /* NetworkManager.swift in Sources */,
 				9CDD070129D35D2800B3EA8B /* Character.swift in Sources */,
+				9CDD070C29D361F900B3EA8B /* CharacterDescriptionViewController.swift in Sources */,
 				9CDD06E629D35C9600B3EA8B /* AppDelegate.swift in Sources */,
 				9CDD06E829D35C9600B3EA8B /* SceneDelegate.swift in Sources */,
 			);

@@ -16,13 +16,6 @@ struct Person: Decodable {
     let firstEpisode: String
     let voicedBy: String
     
-    var shortDescription: String {
-        """
-        👤 \(name)
-        💼 \(occupation)
-        """
-    }
-    
     var description: String {
         """
         Name: \(name)

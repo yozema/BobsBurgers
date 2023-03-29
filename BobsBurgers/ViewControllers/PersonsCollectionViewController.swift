@@ -37,7 +37,6 @@ final class PersonsCollectionViewController: UICollectionViewController {
                 self?.persons = persons
                 self?.collectionView.reloadData()
                 self?.spinnerView.stopAnimating()
-                print(persons)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -46,7 +45,7 @@ final class PersonsCollectionViewController: UICollectionViewController {
     
     private func showSpinner(in view: UIView) {
         spinnerView = UIActivityIndicatorView(style: .large)
-        spinnerView.color = .red
+        spinnerView.color = .systemRed
         spinnerView.startAnimating()
         spinnerView.center = view.center
         spinnerView.hidesWhenStopped = true
@@ -78,6 +77,6 @@ extension PersonsCollectionViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension PersonsCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 30, height: 100)
+        CGSize(width: UIScreen.main.bounds.width - 30, height: 120)
     }
 }

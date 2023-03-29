@@ -24,6 +24,7 @@ final class PersonDescriptionViewController: UIViewController {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         descriptionLabel.text = person.description
+        title = person.name
         fetchImage()
     }
     

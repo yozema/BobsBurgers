@@ -27,16 +27,6 @@ struct Person {
         """
     }
     
-    init(
-        name: String,
-        image: String,
-        gender: String,
-        hairColor: String,
-        occupation: String,
-        firstEpisode: String,
-        voicedBy: String
-    )
-    
     init(personData: [String: Any]) {
         name = personData["name"] as? String ?? ""
         image = personData["image"] as? String ?? ""

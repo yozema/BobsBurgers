@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Decodable {
+struct Person {
     let name: String
     let image: String
     let gender: String
@@ -36,15 +36,6 @@ struct Person: Decodable {
         firstEpisode: String,
         voicedBy: String
     )
-    {
-        self.name = name
-        self.image = image
-        self.gender = gender
-        self.hairColor = hairColor
-        self.occupation = occupation
-        self.firstEpisode = firstEpisode
-        self.voicedBy = voicedBy
-    }
     
     init(personData: [String: Any]) {
         name = personData["name"] as? String ?? ""
